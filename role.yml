@@ -1,0 +1,16 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: tech # NameSpace For which this Role will be create
+  name: govind-role-tech # Role Name
+rules:
+- apiGroups:
+        - ""
+        - "apps"
+  resources:
+        - pods
+        - deployments
+        - replicaset
+  verbs:
+        - get
+        - list
